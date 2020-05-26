@@ -49,6 +49,9 @@ export default {
   box-sizing: border-box;
   box-shadow: 0px 5px 5px 1px rgba(#000, 0.2);
   position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
 
   #content-box {
     height: 100%;

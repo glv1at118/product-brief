@@ -1,15 +1,18 @@
 <template>
   <div id="app">
     <NavigationBar />
+    <ImpressionBanner />
   </div>
 </template>
 
 <script>
 import NavigationBar from "./components/NavigationBar.vue";
+import ImpressionBanner from "./components/ImpressionBanner.vue";
 export default {
   name: "App",
   components: {
-    NavigationBar
+    NavigationBar,
+    ImpressionBanner
   }
 };
 </script>

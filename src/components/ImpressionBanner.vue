@@ -28,7 +28,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $impression-img-url: "../assets/hero-bg-1.png";
 @mixin trans-dura($duration) {
   transition-timing-function: ease-in-out;
@@ -41,51 +41,54 @@ $impression-img-url: "../assets/hero-bg-1.png";
   height: 800px;
   background-image: url($impression-img-url);
   position: relative;
-}
-#phone-box {
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translate(-70%, -50%);
-}
-#banner-box {
-  width: 40%;
-  height: 50%;
-  position: absolute;
-  top: 25%;
-  left: 10%;
-  color: white;
+  overflow: hidden;
 
-  .title {
-    font-size: 60px;
-    font-weight: 700;
-    margin-bottom: 30px;
+  #phone-box {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-70%, -50%);
   }
-  .content {
-    font-size: 30px;
-    margin-bottom: 30px;
-  }
-  .buttons {
-    width: 100%;
-    background-color: red;
+  #banner-box {
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    color: white;
 
-    button {
-      float: left;
-      height: 100%;
-      outline: none;
-      border-radius: 30px;
-      font-size: 26px;
-      border-style: none;
-      border: 2px solid deeppink;
-      box-sizing: border-box;
-      padding: 12px 30px 12px 30px;
-      margin-right: 40px;
-      cursor: pointer;
-      @include trans-dura(0.15s);
+    .title {
+      font-size: 60px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    .content {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    .buttons {
+      width: 100%;
+      background-color: red;
 
-      &:hover {
-        background-color: black;
-        color: white;
+      button {
+        float: left;
+        height: 100%;
+        outline: none;
+        border-radius: 30px;
+        font-size: 26px;
+        border-style: none;
+        border: 2px solid deeppink;
+        box-sizing: border-box;
+        padding: 12px 30px 12px 30px;
+        margin-right: 40px;
+        cursor: pointer;
+        @include trans-dura(0.15s);
+
+        &:hover {
+          background-color: black;
+          color: white;
+          border: 2px solid white;
+        }
       }
     }
   }

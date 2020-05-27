@@ -35,7 +35,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @mixin trans-dura($duration) {
   transition-timing-function: ease-in-out;
   transition-property: all;

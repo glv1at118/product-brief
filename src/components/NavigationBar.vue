@@ -52,6 +52,11 @@ export default {
   top: 0px;
   left: 0px;
   z-index: 100;
+  @include trans-dura(0.15s);
+
+  &:hover {
+    box-shadow: 0px 0px 5px 1px rgba(#000, 0.2);
+  }
 
   #content-box {
     height: 100%;

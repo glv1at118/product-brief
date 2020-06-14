@@ -60,8 +60,7 @@
 
 <script type="javascript">
 export default {
-  name: "PricingPlans",
-  setup() {}
+  name: "PricingPlans"
 };
 </script>
 

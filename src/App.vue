@@ -9,6 +9,7 @@
     <Download />
     <Faqs />
     <LatestNews />
+    <Footer />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import AppScreenShot from "./components/AppScreenShot.vue";
 import Download from "./components/Download.vue";
 import Faqs from "./components/Faqs.vue";
 import LatestNews from "./components/LatestNews.vue";
+import Footer from "./components/Footer.vue";
 export default {
   name: "App",
   components: {
@@ -33,7 +35,8 @@ export default {
     AppScreenShot,
     Download,
     Faqs,
-    LatestNews
+    LatestNews,
+    Footer
   }
 };
 </script>

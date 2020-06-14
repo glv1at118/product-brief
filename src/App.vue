@@ -7,6 +7,7 @@
     <PricingPlans />
     <AppScreenShot />
     <Download />
+    <Faqs />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import NumberFacts from "./components/NumberFacts.vue";
 import PricingPlans from "./components/PricingPlans.vue";
 import AppScreenShot from "./components/AppScreenShot.vue";
 import Download from "./components/Download.vue";
+import Faqs from "./components/Faqs.vue";
 export default {
   name: "App",
   components: {
@@ -27,7 +29,8 @@ export default {
     NumberFacts,
     PricingPlans,
     AppScreenShot,
-    Download
+    Download,
+    Faqs
   }
 };
 </script>

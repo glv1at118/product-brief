@@ -4,8 +4,9 @@
     <ImpressionBanner />
     <ProductFeature />
     <NumberFacts />
-    <PricingPlans/>
-    <AppScreenShot/>
+    <PricingPlans />
+    <AppScreenShot />
+    <Download />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import ProductFeature from "./components/ProductFeature.vue";
 import NumberFacts from "./components/NumberFacts.vue";
 import PricingPlans from "./components/PricingPlans.vue";
 import AppScreenShot from "./components/AppScreenShot.vue";
+import Download from "./components/Download.vue";
 export default {
   name: "App",
   components: {
@@ -24,7 +26,8 @@ export default {
     ProductFeature,
     NumberFacts,
     PricingPlans,
-    AppScreenShot
+    AppScreenShot,
+    Download
   }
 };
 </script>

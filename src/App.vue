@@ -8,6 +8,7 @@
     <AppScreenShot />
     <Download />
     <Faqs />
+    <LatestNews />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import PricingPlans from "./components/PricingPlans.vue";
 import AppScreenShot from "./components/AppScreenShot.vue";
 import Download from "./components/Download.vue";
 import Faqs from "./components/Faqs.vue";
+import LatestNews from "./components/LatestNews.vue";
 export default {
   name: "App",
   components: {
@@ -30,7 +32,8 @@ export default {
     PricingPlans,
     AppScreenShot,
     Download,
-    Faqs
+    Faqs,
+    LatestNews
   }
 };
 </script>

@@ -20,6 +20,20 @@
           </div>
         </div>
       </div>
+
+      <div id="nav-box-mobile">
+        <div id="menu-btn" v-on:click="toggleMenu">Menu</div>
+        <div id="menu" v-bind:class="[flag?'inactive':'']">
+          <ul>
+            <li v-for="item in navTabNames" v-bind:key="item">
+              <a href="#">{{item}}</a>
+            </li>
+          </ul>
+          <div id="purchase-container-mobile">
+            <button>Purchase</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -30,7 +44,11 @@ export default {
   name: "NavigationBar",
   setup() {
     const navTabNames = ref(["Home", "Pages", "Services", "Blog", "Contact"]);
-    return { navTabNames };
+    let flag = ref(true);
+    function toggleMenu() {
+      flag.value = !flag.value;
+    }
+    return { navTabNames, toggleMenu, flag };
   }
 };
 </script>
@@ -151,6 +169,108 @@ export default {
         }
       }
     }
+    #nav-box-mobile {
+      display: none;
+    }
   }
+}
+
+@media only screen and (max-width: 800px) {
+  #content-box {
+    #logo-box {
+      float: left;
+      height: 100%;
+      width: 30%;
+      left: 42.5%;
+      position: relative;
+
+      a {
+        display: block;
+        width: 128px;
+        height: 48px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    #nav-box {
+      display: none;
+    }
+    #nav-box-mobile {
+      display: block !important;
+      width: 100%;
+      height: 150px;
+      position: relative;
+
+      #menu-btn {
+        width: 60px;
+        height: 60px;
+        background-color: rgb(80, 80, 80);
+        color: white;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        box-sizing: border-box;
+        border: 1px solid black;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 60px;
+        font-size: 22px;
+      }
+      #menu {
+        background-color: rgb(80, 80, 80);
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
+
+        li {
+          font-size: 22px;
+          text-align: center;
+          font-weight: 700;
+          padding: 10px 0px 10px 0px;
+          box-sizing: border-box;
+          border-bottom: 1px solid white;
+          a {
+            @include trans-dura(0.15s);
+            color: white;
+
+            &:hover {
+              color: red;
+            }
+          }
+        }
+
+        #purchase-container-mobile {
+          text-align: center;
+          padding: 5px 0px 5px 0px;
+          button {
+            font-size: 22px;
+            padding: 5px 10px 5px 10px;
+            outline: none;
+            border-radius: 30px;
+            font-size: 22px;
+            font-weight: 700;
+            border-style: none;
+            border: 2px solid deeppink;
+            box-sizing: border-box;
+            @include trans-dura(0.15s);
+
+            &:hover {
+              background-color: black;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.inactive {
+  height: 0px !important;
 }
 </style>

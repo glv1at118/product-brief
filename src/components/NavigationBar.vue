@@ -204,9 +204,8 @@ export default {
       position: relative;
 
       #menu-btn {
-        width: 60px;
         height: 60px;
-        background-color: rgb(80, 80, 80);
+        background-color: rgba(80, 80, 80, 0.8);
         color: white;
         position: absolute;
         top: 20px;
@@ -217,9 +216,11 @@ export default {
         text-align: center;
         line-height: 60px;
         font-size: 22px;
+        padding: 0px 10px 0px 10px;
+        box-sizing: border-box;
       }
       #menu {
-        background-color: rgb(80, 80, 80);
+        background-color: rgba(80, 80, 80, 0.8);
         width: 100%;
         position: absolute;
         top: 100px;

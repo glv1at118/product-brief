@@ -36,6 +36,33 @@ $impression-img-url: "../assets/hero-bg-1.png";
   transition-duration: $duration;
 }
 
+@media only screen and (max-width: 800px) {
+  #impression-banner {
+    height: 600px !important;
+    background-size: cover !important;
+
+    #phone-box {
+      display: none;
+    }
+    #banner-box {
+      width: 80% !important;
+      top: 10% !important;
+
+      .title {
+        font-size: 36px !important;
+      }
+      .content {
+        font-size: 24px !important;
+      }
+      .buttons {
+        button {
+          margin-bottom: 20px !important;
+        }
+      }
+    }
+  }
+}
+
 #impression-banner {
   width: 100%;
   height: 800px;
@@ -68,7 +95,6 @@ $impression-img-url: "../assets/hero-bg-1.png";
     }
     .buttons {
       width: 100%;
-      background-color: red;
 
       button {
         float: left;

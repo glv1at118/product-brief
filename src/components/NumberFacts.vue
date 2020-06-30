@@ -105,4 +105,65 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 800px) {
+  #number-facts {
+    width: 100%;
+    margin-top: 100px;
+    display: flow-root;
+    #number-facts-img {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    #number-facts-figures {
+      width: 100%;
+      margin-left: 0%;
+      box-sizing: border-box;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .first-p {
+        margin-top: 30px;
+        font-size: 30px;
+        width: 100%;
+        font-weight: 700;
+      }
+      .second-p {
+        margin-top: 30px;
+        font-size: 22px;
+        width: 100%;
+      }
+      div {
+        width: 100%;
+        section {
+          width: 100%;
+
+          .figure-box {
+            width: 100%;
+            height: 30%;
+            margin: 0px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            box-shadow: 0px 5px 15px 1px rgba(#000, 0.2);
+            border-radius: 15px;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+
+            .num {
+              font-size: 38px;
+              font-weight: bold;
+            }
+
+            .description {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>

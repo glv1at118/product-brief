@@ -177,4 +177,119 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 800px) {
+  #pricing-plans {
+    width: 100%;
+    height: auto !important;
+    margin-top: 150px;
+    position: relative;
+    background-image: url("../assets/prictable-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .upper {
+      width: 90%;
+      height: auto !important;
+      text-align: left;
+      position: relative;
+      left: 5%;
+
+      h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      div {
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        position: static;
+
+        button {
+          width: 200px;
+          height: 100%;
+          border-radius: 25px;
+          font-size: 26px;
+          outline: none;
+          border-style: none;
+          border: 2px solid deeppink;
+          cursor: pointer;
+          @include trans-dura(0.15s);
+
+          &:hover {
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+          }
+        }
+      }
+    }
+    .lower {
+      .card-container {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        transform: translateX(-50%);
+        display: flow-root;
+        position: relative;
+
+        div {
+          padding-bottom: 30px;
+          margin: 0px;
+          margin-bottom: 20px;
+          position: relative;
+          transform: translateX(-50%);
+          left: 50%;
+          width: 80%;
+          border-radius: 20px;
+          box-shadow: 0px 5px 10px 1px rgba(#000, 0.2);
+          background-color: white;
+          float: left;
+
+          .part1 {
+            text-align: center;
+            font-size: 22px;
+            margin: 20px 0px 20px 0px;
+          }
+          .part2 {
+            text-align: center;
+          }
+          .part3 {
+            text-align: center;
+
+            p {
+              margin: 15px 0px 15px 0px;
+            }
+          }
+          .part4 {
+            margin-top: 40px;
+            text-align: center;
+            button {
+              width: 60%;
+              height: 40px;
+              outline: none;
+              border-radius: 30px;
+              font-size: 22px;
+              font-weight: 700;
+              border-style: none;
+              border: 2px solid deeppink;
+              box-sizing: border-box;
+              cursor: pointer;
+              @include trans-dura(0.15s);
+
+              &:hover {
+                background-color: black;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>

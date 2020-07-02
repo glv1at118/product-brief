@@ -28,6 +28,55 @@ export default {
   transition-duration: $duration;
 }
 
+@media only screen and (max-width: 800px) {
+  #download {
+    background-image: url("../assets/cta-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto !important;
+    margin: 80px 0px 80px 0px;
+    color: white;
+    display: flow-root;
+
+    .t {
+      text-align: left !important;
+      font-size: 50px;
+      margin: 80px 0px 80px 0px;
+      padding-left: 30px;
+    }
+    .d {
+      text-align: left !important;
+      font-size: 24px;
+      margin: 80px 0px 80px 0px;
+      padding-left: 30px;
+    }
+    .b {
+      text-align: center;
+      margin: 80px 0px 80px 0px;
+
+      button {
+        outline: none;
+        border-radius: 30px;
+        font-size: 24px;
+        font-weight: 700;
+        border-style: none;
+        border: 2px solid white;
+        box-sizing: border-box;
+        padding: 12px 30px 12px 30px;
+        cursor: pointer;
+        @include trans-dura(0.15s);
+
+        &:hover {
+          background-color: deeppink;
+          color: white;
+          border: 2px solid white;
+        }
+      }
+    }
+  }
+}
+
 #download {
   background-image: url("../assets/cta-bg.jpg");
   background-repeat: no-repeat;

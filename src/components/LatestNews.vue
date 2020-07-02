@@ -63,6 +63,241 @@ export default {
   transition-property: all;
   transition-duration: $duration;
 }
+
+@media only screen and (max-width: 800px) {
+  #latest-news {
+    width: 100%;
+    margin-top: 80px;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .news-title {
+      text-align: left !important;
+      font-size: 46px;
+      margin-bottom: 30px;
+      padding: 0px 30px 0px 30px;
+    }
+    .news-comment {
+      text-align: left !important;
+      font-size: 24px;
+      margin-bottom: 30px;
+      padding: 0px 30px 0px 30px;
+    }
+    .card-box {
+      width: 80%;
+      position: relative;
+      left: 30px !important;
+      display: flow-root;
+      color: white;
+
+      li {
+        width: 370px !important;
+        height: 390px;
+        margin: 0px !important;
+        margin-left: 50% !important;
+        transform: translateX(-50%);
+        margin-bottom: 10px !important;
+        box-sizing: border-box;
+        padding: 20px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px 1px rgba(#000, 0.2);
+        background-image: url("../assets/blog-2.jpg");
+        background-repeat: no-repeat;
+        position: relative;
+        @include trans-dura(0.3s);
+
+        &:hover {
+          box-shadow: 0px 5px 10px 8px rgba(#000, 0.2);
+        }
+
+        &:hover .btn_box,
+        &:hover .title_box,
+        &:hover .info_box {
+          transform: translateY(0px);
+        }
+
+        &:hover .title_box,
+        &:hover .info_box {
+          background-color: rgba(#000, 0.5);
+        }
+
+        .news-bkg {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        .btn_box {
+          transform: translateY(-100px);
+          @include trans-dura(0.3s);
+
+          button {
+            font-size: 16px;
+            box-sizing: border-box;
+            padding: 5px 10px 5px 10px;
+            margin: 0px 30px 0px 0px;
+            border-radius: 20px;
+            background-color: deeppink;
+            color: white;
+            outline: none;
+            border: 2px solid white;
+            cursor: pointer;
+            @include trans-dura(0.3s);
+
+            &:hover {
+              background-color: black;
+            }
+          }
+        }
+
+        .title_box {
+          font-size: 30px;
+          margin-top: 200px;
+          border-bottom: 1px solid white;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          box-sizing: border-box;
+          @include trans-dura(0.3s);
+          transform: translateY(58px);
+        }
+        .info_box {
+          display: flow-root;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          @include trans-dura(0.3s);
+          transform: translateY(58px);
+
+          .author {
+            float: left;
+            margin: 0px 30px 0px 0px;
+          }
+          .date {
+            float: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #latest-news {
+    width: 100%;
+    margin-top: 80px;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .news-title {
+      text-align: center;
+      font-size: 46px;
+      margin-bottom: 30px;
+    }
+    .news-comment {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .card-box {
+      width: 80%;
+      position: relative;
+      left: 10%;
+      display: flow-root;
+      color: white;
+
+      li {
+        float: left;
+        width: 30%;
+        height: 390px;
+        margin-left: 1.66%;
+        margin-right: 1.66%;
+        box-sizing: border-box;
+        padding: 20px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px 1px rgba(#000, 0.2);
+        background-image: url("../assets/blog-2.jpg");
+        background-repeat: no-repeat;
+        position: relative;
+        @include trans-dura(0.3s);
+
+        &:hover {
+          box-shadow: 0px 5px 10px 8px rgba(#000, 0.2);
+        }
+
+        &:hover .btn_box,
+        &:hover .title_box,
+        &:hover .info_box {
+          transform: translateY(0px);
+        }
+
+        &:hover .title_box,
+        &:hover .info_box {
+          background-color: rgba(#000, 0.5);
+          transform: translateY(-150px) !important;
+        }
+
+        .news-bkg {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        .btn_box {
+          transform: translateY(-100px);
+          @include trans-dura(0.3s);
+
+          button {
+            font-size: 16px;
+            box-sizing: border-box;
+            padding: 5px 10px 5px 10px;
+            margin: 0px 30px 0px 0px;
+            border-radius: 20px;
+            background-color: deeppink;
+            color: white;
+            outline: none;
+            border: 2px solid white;
+            cursor: pointer;
+            @include trans-dura(0.3s);
+
+            &:hover {
+              background-color: black;
+            }
+          }
+        }
+
+        .title_box {
+          font-size: 30px;
+          margin-top: 200px;
+          border-bottom: 1px solid white;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          box-sizing: border-box;
+          @include trans-dura(0.3s);
+          transform: translateY(-80px) !important;
+        }
+        .info_box {
+          display: flow-root;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          @include trans-dura(0.3s);
+          transform: translateY(-80px) !important;
+
+          .author {
+            float: left;
+            margin: 0px 30px 0px 0px;
+          }
+          .date {
+            float: left;
+          }
+        }
+      }
+    }
+  }
+}
+
 #latest-news {
   width: 100%;
   margin-top: 80px;
@@ -99,6 +334,7 @@ export default {
       border-radius: 10px;
       box-shadow: 0px 5px 10px 1px rgba(#000, 0.2);
       background-image: url("../assets/blog-2.jpg");
+      background-repeat: no-repeat;
       position: relative;
       @include trans-dura(0.3s);
 
@@ -115,6 +351,7 @@ export default {
       &:hover .title_box,
       &:hover .info_box {
         background-color: rgba(#000, 0.5);
+        // transform: translateY(0px);
       }
 
       .news-bkg {

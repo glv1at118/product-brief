@@ -65,6 +65,77 @@ export default {
   transition-property: all;
   transition-duration: $duration;
 }
+
+@media only screen and (max-width: 800px) {
+  #faqs {
+    width: 100%;
+    display: flow-root;
+
+    .title {
+      text-align: left!important;
+      padding-left: 30px;
+      font-size: 46px;
+      margin: 30px 0px 30px 0px;
+    }
+    .desc {
+      text-align: left!important;
+      padding-left: 30px;
+      padding-right: 30px;
+      font-size: 24px;
+      margin: 30px 0px 50px 0px!important;
+    }
+    .content {
+      width: 80%;
+      display: flow-root;
+      position: relative;
+      left: 30px!important;
+
+      .left {
+        float: left;
+        width: 100%!important;
+
+        li {
+          width: 100%;
+          padding: 20px;
+          box-sizing: border-box;
+          box-shadow: 0px 5px 8px 1px rgba(#000, 0.2);
+          margin-bottom: 25px;
+          border-radius: 10px;
+          overflow: hidden;
+          position: relative;
+          user-select: none;
+          @include trans-dura(0.15s);
+
+          &:hover {
+            box-shadow: 0px 5px 8px 5px rgba(#000, 0.2);
+          }
+
+          .info1 {
+            font-size: 28px;
+            cursor: pointer;
+          }
+          .info2 {
+            font-size: 20px;
+            margin-top: 25px;
+          }
+          .mark {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+            font-weight: 700;
+            color: gray;
+            cursor: pointer;
+          }
+        }
+      }
+      .right {
+        display: none;
+      }
+    }
+  }
+}
+
 #faqs {
   width: 100%;
   display: flow-root;
